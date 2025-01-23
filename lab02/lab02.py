@@ -16,11 +16,26 @@
 # you have 4 kings and 3 queens, there are three best
 # hands: 4 kings along with any of the three queens).
 
-import itertools
+from itertools import combinations
 
 def best_hand(hand):
     "From a 7-card hand, return the best 5 card hand."
-    # Your code here
+    
+    five_card_hands = combinations(hand, 5) # all possible 5 card hands
+    
+    # init the best hand and the best rank to none
+    best_hand = None
+    best_rank = None
+
+    # iterate through the hands and keep track of the best hand and rank
+    for five_card_hand in five_card_hands:
+        rank = hand_rank(five_card_hand)
+        if best_rank is None or rank > best_rank:
+            best_rank = rank
+            best_hand = five_card_hand
+    
+    # return the best hand as a list
+    return best_hand
     pass
     
 # ------------------
