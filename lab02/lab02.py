@@ -33,7 +33,7 @@ def best_hand(hand):
         if best_rank is None or rank > best_rank:
             best_rank = rank
             best_hand = five_card_hand
-    
+
     # return the best hand as a list
     return best_hand
     pass
