@@ -4,8 +4,10 @@
     "temperature": 0,
     "max_tokens": 100
   },
+  
   "messages": [{"role": "system", "content": "You are a weather assistant. You can use get_weather tool to get the weather for a city. You will be asked to provide the weather for a city."},
   {"role": "user", "content": "{{ask}}"}],
+
   "tools": [
       {
         "type": "function",
